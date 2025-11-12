@@ -19,7 +19,7 @@ Follow these steps to set up and run the project locally:
 ```bash
 git clone https://github.com/Pratik-Ninawe/Speech-to-Text.git
 cd Speech-to-Text
-````
+```
 
 ### 2. Create and Activate a Virtual Environment
 
