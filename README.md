@@ -1,6 +1,3 @@
-Here’s a **README.md** tailored to your repository at [https://github.com/Pratik-Ninawe/Speech-to-Text](https://github.com/Pratik-Ninawe/Speech-to-Text).
-You can copy and paste this into your `README.md` file and fill in any blanks or adjust as needed.
-
 ````markdown
 # Speech-to-Text
 
@@ -133,5 +130,4 @@ hello my name is pratik and im testing this speech to text system
 
 ```
 
----
 
