@@ -1,125 +1,130 @@
 
-## Setup & Running Locally  
-Follow these steps to set up and run the project on your local machine:
 
-1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/Pratik-Ninawe/Speech-to-Text.git
-   cd Speech-to-Text
+````markdown
+#  Speech-to-Text
+
+## 📘 Project Title and Description
+**Speech-to-Text** is a simple Python-based project that converts spoken audio into written text.  
+It uses the **SpeechRecognition** library to process audio input (either from a file or microphone) and outputs the transcribed text.
+
+This project demonstrates basic Automatic Speech Recognition (ASR) functionality and can be extended for more complex speech applications.
+
+---
+
+##  Setup and Run Instructions
+
+Follow these steps to set up and run the project locally:
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Pratik-Ninawe/Speech-to-Text.git
+cd Speech-to-Text
 ````
 
-2. **Create and activate a virtual environment**
+### 2. Create and Activate a Virtual Environment
 
-   ```bash
-   # Example using venv
-   python3 -m venv venv
-   source venv/bin/activate   # On Linux/Mac
-   # On Windows:
-   # venv\Scripts\activate
-   ```
+```bash
+python -m venv venv
 
-3. **Install dependencies**
+# Activate on Windows
+venv\Scripts\activate
 
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Download any necessary models or datasets**
-   If the project uses a pre-trained model or dataset, download it and place it in the appropriate folder (e.g., `models/` or `data/`).
-   Update path settings in the code/config if required.
-
-5. **Run the transcription script**
-
-   ```bash
-   python transcribe.py --input path/to/audio.wav --output path/to/output.txt
-   ```
-
-   Replace `path/to/audio.wav` with your audio file and `path/to/output.txt` with your desired output path.
-
-6. **Deactivate the virtual environment**
-
-   ```bash
-   deactivate
-   ```
-
----
-
-## Dataset(s) Used
-
-* **Source:** Real time Voice and .wav file
-
-* **Pre-processing steps applied:**
-
-  * Conversion of audio files to consistent format (e.g., `.wav`, specific sample rate)
-  * Cleaning or normalising audio (if any)
-  * Trimming or padding audio length (if required)
-  * Any transcript cleaning or formatting applied
-
-
----
-
-## Repository Directory Structure
-
-Here is a high-level view of how this project is organised:
-
-```
-Speech-to-Text/
-│
-├── models/                # (Optional) Pre-trained or fine-tuned model checkpoint files
-├── data/                  # (Optional) Dataset folders
-│   ├── raw/               # Original audio files
-│   └── processed/         # Pre-processed audio + transcripts
-├── src/                   # Source code files
-│   ├── audio_preprocess.py
-│   ├── model_inference.py
-│   └── utils.py
-├── output/                # Generated transcripts, logs, etc
-├── requirements.txt       # Python dependencies
-├── transcribe.py          # Main script to run inference / transcription
-├── config.yaml            # (Optional) Configuration file for paths / parameters
-└── README.md              # This file
+# Activate on macOS/Linux
+source venv/bin/activate
 ```
 
-Adjust folder names if the actual repository uses different names.
+### 3. Install Dependencies
 
----
-
-## Example Input & Expected Output
-
-**Input:**
-An example audio file `sample.wav` containing speech such as:
-
-> “Hello, my name is Pratik and I’m testing this speech to text system.”
-
-**Expected Output:**
-A transcript file `sample.txt` with content:
-
+```bash
+pip install -r requirements.txt
 ```
-hello my name is pratik and im testing this speech to text system
+
+### 4. Run the Project
+
+You can run the main Python script to perform speech recognition from an audio file.
+
+```bash
+python speech_to_text.py
+```
+
+If using microphone input, ensure your microphone is connected and accessible.
+
+### 5. Deactivate Virtual Environment (Optional)
+
+```bash
+deactivate
 ```
 
 
 ---
 
-## Technologies Used
+##  Example Usage
 
-* **Programming Language:** Python
-* **Frameworks and Libraries:**  
-  - **SpeechRecognition** – for converting speech to text using various speech APIs  
-  - **pyaudio** – for capturing and processing real-time audio input from the microphone  
-  - **wave** – for handling `.wav` audio file operations  
-  - **os** – for file path and system-level operations  
-  - **datetime** – for timestamp generation and logging  
-  - **json** – for structured output (if used for storing transcription results)
-* **Tools and Environment:**  
-  - **pip** – for package management  
-  - **venv** – for creating isolated virtual environments  
-  - **Git & GitHub** – for version control and repository hosting  
+### Example Input:
+
+An audio file named `sample.wav` containing:
+
+> "Hello, my name is Pratik and I am testing this speech to text project."
+
+### Example Output:
+
+A text output file `output.txt` containing:
+
+```
+hello my name is pratik and i am testing this speech to text project
+```
+
+---
+
+##  Dataset Information
+
+This project **does not use any external dataset**.
+It works directly with user-provided or recorded audio inputs (e.g., `.wav` files) for transcription.
 
 
 ---
 
+##  Libraries and Frameworks Used
+
+| Category                 | Library / Tool      | Purpose                                      |
+| ------------------------ | ------------------- | -------------------------------------------- |
+| **Core ASR**             | `SpeechRecognition` | Handles speech-to-text transcription         |
+| **Audio I/O**            | `PyAudio`           | Captures and processes audio from microphone |
+| **File Handling**        | `wave`, `os`        | Manages and reads `.wav` files               |
+| **Programming Language** | Python 3            | Implementation language                      |
+| **Environment**          | `venv`              | Virtual environment management               |
+| **Version Control**      | Git & GitHub        | Repository hosting and versioning            |
+
+---
+
+##  Project Workflow
+
+```
+🎙️ Audio Input  →  🎛️ Processing (SpeechRecognition + PyAudio)
+                        ↓
+                  🧠 Speech-to-Text Conversion
+                        ↓
+                  🗒️ Output Transcript (Text File)
+```
+
+---
+
+##  License
+
+This project is licensed under the **MIT License**.
+See the [LICENSE](LICENSE) file for more details.
+
+---
+
+
+##  Author
+
+**Pratik Ninawe**
+
 
 ```
 
+---
 
+Would you like me to include a **diagram image (architecture or workflow)** section with a placeholder so you can later add a visual (`.png`) file from your repo?
+```
