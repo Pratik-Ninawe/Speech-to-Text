@@ -1,11 +1,3 @@
-````markdown
-# Speech-to-Text
-
-## Project Title and Description  
-**Speech-to-Text**  
-This project provides a Python-based solution to convert speech audio into text. It allows users to input an audio file (for example `.wav` format) and obtain its transcription as output. The aim is to give a simple, usable transcription pipeline.
-
----
 
 ## Setup & Running Locally  
 Follow these steps to set up and run the project on your local machine:
