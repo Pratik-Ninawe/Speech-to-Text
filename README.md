@@ -1,10 +1,16 @@
-````markdown
 
+
+````markdown
+# Speech-to-Text
+
+
+This project demonstrates basic Automatic Speech Recognition (ASR) functionality and can be extended for advanced speech applications, such as real-time transcription or language analysis.
+
+---
 
 ##  Setup and Run Instructions
 
 Follow these steps to set up and run the project locally:
-
 
 ### 1. Clone the Repository
 ```bash
@@ -32,18 +38,45 @@ pip install -r requirements.txt
 
 ### 4. Run the Project
 
-You can run the main Python script to perform speech recognition from an audio file.
+Run the main script to perform speech recognition:
 
 ```bash
 python speech_to_text.py
 ```
 
-If using microphone input, ensure your microphone is connected and accessible.
+* **Audio file input:** Make sure you have a `.wav` file (e.g., `sample.wav`) in the project folder.
+* **Microphone input:** Ensure your microphone is connected and accessible.
 
 ### 5. Deactivate Virtual Environment (Optional)
 
 ```bash
 deactivate
+```
+
+**Note:** No additional models or datasets are required. The project uses online or system-provided speech recognition engines through the `SpeechRecognition` library.
+
+---
+
+##  Dataset Information
+
+* This project **does not use any external dataset**.
+* It works directly with user-provided or recorded audio inputs (e.g., `.wav` files).
+* No preprocessing is required for the input files.
+
+---
+
+##  Repository Directory Structure
+
+```
+Speech-to-Text/
+├── audio/                      # (folder)
+├── .gitignore
+├── README.md
+├── gui_stt.py
+├── requirements.txt
+├── stt_google.py
+├── stt_whisper.py
+└── stt_whisper_realtime.py
 ```
 
 ---
@@ -52,13 +85,12 @@ deactivate
 
 ### Example Input
 
-An audio file named `sample.wav` containing:
+Audio file: `sample.wav` containing:
 
 > "Hello, my name is Pratik and I am testing this speech to text project."
 
 ### Example Output
 
-A text output file `output.txt` containing:
 
 ```
 hello my name is pratik and i am testing this speech to text project
@@ -66,14 +98,22 @@ hello my name is pratik and i am testing this speech to text project
 
 ---
 
-##  Dataset Information
+##  Project Workflow
 
-This project **does not use any external dataset**.
-It works directly with user-provided or recorded audio inputs (e.g., `.wav` files) for transcription.
+**Text-based workflow diagram:**
+
+```
+ Audio Input  →   Processing (SpeechRecognition + PyAudio)
+                        ↓
+                   Speech-to-Text Conversion
+                        ↓
+                   Output Transcript (Text File)
+```
+
 
 ---
 
-##  Libraries and Frameworks Used
+##  Programming Languages, Libraries, and Tools
 
 | Category                 | Library / Tool      | Purpose                                      |
 | ------------------------ | ------------------- | -------------------------------------------- |
@@ -86,19 +126,9 @@ It works directly with user-provided or recorded audio inputs (e.g., `.wav` file
 
 ---
 
-##  Project Workflow
 
-```
- Audio Input  →  Processing (SpeechRecognition + PyAudio)
-                        ↓
-                 Speech-to-Text Conversion
-                        ↓
-                   Output Transcript (Text File)
-```
-
-
-
-## 👤 Author
+##  Author
 
 **Pratik Ninawe**
+
 
