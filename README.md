@@ -1,17 +1,10 @@
 ````markdown
-# Speech-to-Text
 
-##  Project Title and Description
-**Speech-to-Text** is a simple Python-based project that converts spoken audio into written text.  
-It uses the **SpeechRecognition** library to process audio input (either from a file or microphone) and outputs the transcribed text.
-
-This project demonstrates basic Automatic Speech Recognition (ASR) functionality and can be extended for more complex speech applications.
-
----
 
 ##  Setup and Run Instructions
 
 Follow these steps to set up and run the project locally:
+
 
 ### 1. Clone the Repository
 ```bash
@@ -109,7 +102,3 @@ It works directly with user-provided or recorded audio inputs (e.g., `.wav` file
 
 **Pratik Ninawe**
 
-``` 
-
-If you want, I can also make a **more visually appealing version with badges for Python, License, and GitHub stars**. That usually makes it look more professional. Do you want me to do that?
-```
